@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/projects', (request, response) => {
   const {title, name} = request.query;
   console.log(title, name);
@@ -11,8 +13,9 @@ app.get('/projects', (request, response) => {
 	]);
 });
 
-app.post('/projects', (request, response) => {
-  return response.json([
+app.post('/teste', (req, res) => {
+  console.log(req.body)
+  return res.json([
   'Project 1',
   'Project 2',
   'Project 3',
