@@ -1,11 +1,15 @@
 {
   "name": "conceitos-dev",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
   "repository": "git@github.com:Dadarkp3/conceitos-dev.git",
   "author": "Daiane Mascarenhas Lauro da Silva <adm.daianesilva@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
   }
 }

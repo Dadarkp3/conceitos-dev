@@ -2,8 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.get('/projects', (request, response) => {
-  return response.send('Hello World');
+app.get('/', (request, response) => {
+  return response.json({
+    message: 'Hello Daiane',
+  });
 });
 
 app.listen(3333);
