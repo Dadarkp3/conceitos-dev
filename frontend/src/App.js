@@ -18,8 +18,10 @@ export default function App(){
   }, []);
 
   function handleAddProject(){
-    setProjects([...projects, `Novo Projeto ${Date.now()}`]);
-    console.log(projects);
+    api.post('projects', {
+      title: `Novo Projeto ${Date.now()}`,
+      owner: "Daiane"
+    })
   }
     return (
       <>
