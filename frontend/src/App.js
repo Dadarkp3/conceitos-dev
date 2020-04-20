@@ -17,11 +17,14 @@ export default function App(){
     });
   }, []);
 
-  function handleAddProject(){
-    api.post('projects', {
+  async function handleAddProject(){
+    const response = await api.post('projects', {
       title: `Novo Projeto ${Date.now()}`,
       owner: "Daiane"
-    })
+    });
+
+    const project = response.data;
+    setProjects([...projects, project]);
   }
     return (
       <>
